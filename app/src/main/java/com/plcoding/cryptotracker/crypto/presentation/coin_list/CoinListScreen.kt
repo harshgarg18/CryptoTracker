@@ -13,7 +13,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import com.plcoding.cryptotracker.crypto.presentation.coin_list.components.CoinListItem
@@ -40,7 +39,7 @@ fun CoinListScreen(
             items(state.coins) { coinUi ->
                 CoinListItem(
                     coinUi = coinUi,
-                    onClick = {},
+                    onClick = { },
                     modifier = Modifier.fillMaxWidth()
                 )
                 HorizontalDivider()
@@ -50,7 +49,6 @@ fun CoinListScreen(
 }
 
 @PreviewLightDark
-@Preview
 @Composable
 private fun CoinListScreenPreview() {
     CryptoTrackerTheme {

@@ -77,7 +77,7 @@ fun CoinListItem(
                 fontWeight = FontWeight.SemiBold,
                 color = contentColor
             )
-            Spacer(modifier = modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             PriceChange(change = coinUi.changePercent24Hr)
         }
     }
@@ -89,7 +89,7 @@ private fun CoinListItemPreview() {
     CryptoTrackerTheme {
         CoinListItem(
             coinUi = previewCoin,
-            onClick = {},
+            onClick = { },
             modifier = Modifier.background(
                 MaterialTheme.colorScheme.background
             )
@@ -100,9 +100,9 @@ private fun CoinListItemPreview() {
 internal val previewCoin = Coin(
     id = "bitcoin",
     rank = 1,
-    name = "Bitcodddin",
+    name = "Bitcoin",
     symbol = "BTC",
     marketCapUsd = 1241273958896.75,
     priceUsd = 62828.15,
-    changePercent24Hr = 0.1,
+    changePercent24Hr = -0.1
 ).toCoinUi()
