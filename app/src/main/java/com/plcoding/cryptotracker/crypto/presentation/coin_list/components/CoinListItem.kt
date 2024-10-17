@@ -47,7 +47,7 @@ fun CoinListItem(
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Icon(
-            imageVector = ImageVector.vectorResource(id = coinUi.icon),
+            imageVector = ImageVector.vectorResource(id = coinUi.iconRes),
             contentDescription = coinUi.name,
             tint = MaterialTheme.colorScheme.primary,
             modifier = Modifier.size(85.dp)
@@ -104,5 +104,5 @@ internal val previewCoin = Coin(
     symbol = "BTC",
     marketCapUsd = 1241273958896.75,
     priceUsd = 62828.15,
-    changePercent24Hr = -0.1
+    changePercent24Hr = 0.1
 ).toCoinUi()
