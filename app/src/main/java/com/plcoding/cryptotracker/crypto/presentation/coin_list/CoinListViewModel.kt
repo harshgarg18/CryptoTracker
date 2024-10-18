@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.plcoding.cryptotracker.core.domain.util.onError
 import com.plcoding.cryptotracker.core.domain.util.onSuccess
+import com.plcoding.cryptotracker.crypto.domain.Coin
 import com.plcoding.cryptotracker.crypto.domain.CoinDataSource
 import com.plcoding.cryptotracker.crypto.presentation.coin_detail.DataPoint
 import com.plcoding.cryptotracker.crypto.presentation.models.CoinUi
@@ -90,7 +91,7 @@ class CoinListViewModel(
                     _state.update {
                         it.copy(
                             isLoading = false,
-                            coins = coins.map { it.toCoinUi() }
+                            coins = coins.map(Coin::toCoinUi)
                         )
                     }
                 }
